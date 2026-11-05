@@ -1,0 +1,13 @@
+services:
+  pos:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      POS_DATABASE: /app/data/restaurant.db
+      POS_SECURE_COOKIES: ${POS_SECURE_COOKIES:-0}
+    volumes:
+      - pos-data:/app/data
+    restart: unless-stopped
+volumes:
+  pos-data:

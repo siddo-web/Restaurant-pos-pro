@@ -1,0 +1,19 @@
+/* Public QR/online ordering skins mirror the selected branch's POS theme. */
+body[data-theme="classic"]{--bg:#f7f7f4;--text:#1d2c22;--muted:#718076;--accent:#d96743;--line:#dfe5dc;--guest-card:#fff;--guest-soft:#f3f4ef}
+body[data-theme="midnight"]{--bg:#0d1118;--text:#f2f5fa;--muted:#a3afc1;--accent:#a78bfa;--line:#344053;--guest-card:#171f2b;--guest-soft:#222b39}
+body[data-theme="ivory"]{--bg:#fbf8f0;--text:#282521;--muted:#746e64;--accent:#b66a39;--line:#e9e1d4;--guest-card:#fff;--guest-soft:#f5efe5}
+body[data-theme="ocean"]{--bg:#eef4fa;--text:#142b3c;--muted:#60778b;--accent:#2079b4;--line:#d9e6f1;--guest-card:#fff;--guest-soft:#e9f1f9}
+body[data-theme="forest"]{--bg:#f0f5f0;--text:#1b3229;--muted:#63766b;--accent:#307755;--line:#dce8de;--guest-card:#fff;--guest-soft:#e8f1e9}
+body[data-theme="saffron"]{--bg:#fff9eb;--text:#33281c;--muted:#796c55;--accent:#bc8220;--line:#efe5c8;--guest-card:#fff;--guest-soft:#fbf1d6}
+body{transition:background-color .25s,color .25s}
+body[data-theme] .meal,body[data-theme] .cart,body[data-theme] .confirmation{background:var(--guest-card);border-color:var(--line)}
+body[data-theme] .meal-art,body[data-theme] .guest-badge,body[data-theme] .cart-line button{background:var(--guest-soft);color:var(--text)}
+body[data-theme] .meal button,body[data-theme] button.primary{background:var(--accent);color:#fff}
+body[data-theme] .field input,body[data-theme] .field select,body[data-theme] .field textarea{background:var(--guest-card);color:var(--text);border-color:var(--line)}
+body[data-theme] .field label,body[data-theme] .meal p,body[data-theme] .cart-empty,body[data-theme] .hero p,body[data-theme] .confirmation p{color:var(--muted)}
+body[data-theme="midnight"] .notice{background:var(--guest-soft);color:#d9c9a5}
+body[data-theme="midnight"] .cart h2{color:var(--text)}
+body[data-theme="midnight"] footer{color:var(--muted)}
+.guest-logo{display:flex;align-items:center;gap:11px;max-width:65%;font:800 21px Manrope,sans-serif;letter-spacing:-.06em;min-width:0}.guest-logo img{max-height:46px;max-width:85px;width:auto;height:auto;object-fit:contain;border-radius:8px}.guest-logo strong{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:clamp(14px,2.5vw,23px)}.guest-logo span{color:var(--accent)}
+.guest-logo small{display:block;font-size:9px;letter-spacing:.12em;color:var(--muted);font-weight:700;padding:0;margin-top:1px}
+@media(max-width:600px){.guest-logo{max-width:70%;gap:7px}.guest-logo img{max-width:58px;max-height:38px}.guest-logo small{font-size:8px}}
